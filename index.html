@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music quiz</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Music_quiz.css">
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+	
+</head>
+<body>
+	<div id="app" v-bind:style="{background:'url('+img+')'}" v-cloak>
+		<!-- ************************** Start page  v-if:checkButton***************************************** -->
+		<img v-if="checkButton" id="button" v-bind:src="buttonImg" v-on:click="getName"/>
+		<!--*************************** Input names page  v-if:checkForm********************************** -->
+		<h2 id="form" v-if="checkForm" >Welcome to the worst music quiz in your life. We hope it will ruin your friendship. If you want to win you need to get more points than your competitor. Now fill in your names and let the fun begin! </h2>
+		<form v-if="checkForm" v-cloak>
+			<input v-model="player1" type="text" placeholder="Name of Player1">
+			<input v-model="player2" type="text" placeholder="Name of Player2">
+			<input id="submit" type="button" value="Let's play!" v-on:click="submit">
+			<p id="prompt" v-if="checkInput">FILL IN YOUR NAMES DUMMIES</p>
+		</form>        
+		<!-- *****************Song playing page, v-if:checkName||checkStopPlay************************-->
+        <div id="name" v-show="checkName">
+			<h2 id="button1" v-on:click="player1Chance" >{{player1}}</h2>
+			<p id="score1">Score: {{scoreOne}}</p>
+			<img id="play" v-bind:src="buttonPlay" v-on:click="playMusic" v-if="checkStartPlay"></img>
+			<p id="message" v-show="checkText">Push your button and be first!</p>
+			<p id="score2">Score: {{scoreTwo}}</p>
+			<h2 id="button2" v-on:click="player2Chance" >{{player2}}</h2> 
+       </div>
+	    <!-- ********************question page with timer, v-if:checkQ *******************************-->
+	    <div v-show="checkQ">
+	    	<h2 id="what">What is the song's title?</h2>
+	    	<p id="seconds">You have 10 seconds to answer!</p>
+	    	<div id="myBarTwo" ref="myBarTwo"></div>
+	    	
+	    </div>
+	    <!-- *********shows when playr was too late to puch the button, v-if:checkTime checkNextSong**************-->
+	    <div v-show="checkTime">  
+	    	<h2 id="checkLate" >Sorry, too late.</h2>
+			<button id="checkNextSong"  v-show="checkNextSong" v-on:click="submit">Next song</button>
+		</div>
+	     
+	    <!-- ******************page shows the answer and gives points,v-if:checkScore *************************--> 
+	    <div v-show="checkScore">
+	    	<h2 id="title" v-text="songTitle"></h2>
+	    	<h2 id="q">Did you get it right?</h2>
+	    	<button id="yes" v-on:click="scorePlus">Yes, I did!</button>
+	    	<button id="no" v-on:click="scoreNotMinus">No, I SUCK!</button>
+	    </div> 
+	     <!-- ******************show add 1 score or no score,v-if:checkShow*************************--> 
+	     <div v-show="checkShow">
+	     	<h2 id="gotscore" v-text="oneScoreText"></h2>
+	     </div>
+	      <!-- ****************** win page,v-if:checkWin checkSpce*************************--> 
+	      <div v-if="checkWin" >
+	      	<h2 id="win" v-bind:class="{ winSpace: checkSpace }">Yeah! {{winner}} you won this round!</h2> 
+	      	<button id="playagain" v-on:click="playAgain">Play again!</button>
+	      </div>
+	</div>
+	<script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="Music_quiz.js"></script>
+</body>
+</html>

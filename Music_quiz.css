@@ -1,0 +1,333 @@
+body{
+	width: 360px;
+	height: 640px;
+}
+h2{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+p{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#app{
+	width:100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Righteous', cursive;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+	/*background-repeat: no-repeat;*/
+
+}
+#form {
+	margin-top: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
+	color: #330019;
+	background-color: white;
+	padding: 2%;
+	border-radius: 3px;	
+	text-align: center;
+
+	
+}
+
+input[type=button]{
+	background-color: #330019;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin-top: 10%;
+	margin-left: 5%;
+    cursor: pointer;
+    width: 90%;
+    font-family: 'Righteous', cursive;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: 90%;
+    padding: 12px 20px;
+    margin-left: 5%;
+    margin-top: 2%; 
+    margin-bottom:2 %;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid pink;
+}
+
+#prompt{
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 20px;
+	font-weight: bold;
+	color: #330019;
+	background-color: white;
+	padding: 2%;
+	border-radius: 3px;	
+	text-align: center;
+	
+}
+#button1{
+	display:block; 
+ 	padding-top: 20%;
+ 	padding-bottom: 20%;
+ 	width: 90%;
+ 	background-color:#330019;
+ 	color: white;
+ 	text-align: center;
+ 	font-size: 40px;
+ 	margin-top:5%;
+ 	margin-left: 5%;
+ 	margin-right: 5%;
+ 	margin-bottom: 0;
+ 	border-radius: 8px;
+ 	
+}
+
+
+#button2{
+	display:block; 
+ 	background-color:#330019;
+ 	color: white;
+ 	text-align: center;
+ 	font-size: 40px;
+ 	margin-bottom:5%;
+ 	margin-left: 5%;
+ 	margin-right: 5%;
+ 	margin-top: 0%;
+ 	border-radius: 8px;
+ 	padding-top: 20%;
+ 	padding-bottom: 20%;
+ 	width: 90%;
+ 	
+}
+
+#play{
+	width: 32%;
+	float: left;
+	margin-left: 35%;
+	margin-top: 0;
+
+}
+
+#message{
+	height: 10%;
+	text-align: center;
+	font-size: 25px;
+	color:white;
+}
+
+
+#button{
+	width: 40%;
+	margin-left:30%;
+	margin-top:70%; 
+}
+#name{
+	width: 100%;
+}
+
+#score1{
+	
+	font-size: 20px;
+	margin-left: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	color: white;
+}
+
+#score2{
+	
+	font-size: 20px;
+	margin-left: 5%;
+	margin-top: 12%;
+	margin-bottom: 5%;
+	color: white;
+	clear: left;
+}
+#what{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 60%;
+	text-align: center;
+	border-radius: 3px;
+	color: #330019;
+	background-color: white;
+	padding: 2%;
+}
+
+#seconds{
+	font-size: 20px;
+	margin-top: 5%;
+	text-align: center;
+	border-radius: 3px;
+	color: #330019;
+	background-color: white;
+	padding: 2%;
+}
+
+#title{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 50%;
+	height: 60%;
+	margin-bottom: 0;
+	color: #330019;
+	background-color: white;
+	border-radius: 3px;	
+	text-align: center;
+	border-radius: 3px;
+}
+
+#q{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 0;
+	font-weight: bold;
+	color: #330019;
+	background-color: white;
+	padding: 2%;
+	border-radius: 3px;	
+	text-align: center;
+	border-radius: 3px;
+}
+
+#yes{
+	margin-left: 5%;
+	margin-right: 0;
+	margin-top: 5%;
+	color: white;
+	border-radius: 3px;
+	border: none;
+	background-color: #330019;
+	font-family: 'Righteous', cursive;
+	width: 90%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#no{
+	margin-right: 20%;
+	margin-left: 5%;
+	margin-top: 5%;
+	background-color: #330019;
+	color: white;
+	border-radius: 3px;
+	border: none;
+	font-family: 'Righteous', cursive;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 90%;
+}
+
+#gotscore{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 70%;
+	margin-bottom: 0;
+	padding: 16px 32px;
+	color: #330019;
+	background-color: white;
+	height: 10%;
+	border-radius: 3px;	
+	text-align: center;
+	border-radius: 3px;
+}
+
+#win{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 0;
+	color: #330019;
+	background-color: white;
+	padding: 16px 32px;
+	border-radius: 3px;	
+	text-align: center;
+	
+}
+
+.winSpace{
+	margin-top: 60%;
+}
+
+#playagain{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	padding: 16px 32px;
+	border: none;
+	color: white;
+	background-color:#330019 ;
+	border-radius: 3px;	
+	text-align: center;
+	font-family: 'Righteous', cursive;
+}
+
+#slow{
+	text-align: center;
+	color:#330019;
+	margin-top: 60%;
+	background-color: white;
+	padding: 16px 32px;
+	border-radius: 3px;
+
+}
+
+#next{
+	width: 90%;
+	padding: 16px 32px;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	color: white;
+	border-radius: 3px;
+	background-color: #330019;
+	border:none;
+	font-family: 'Righteous', cursive;
+}
+
+#myBarTwo{
+    width: 75%;
+    margin-left: 15%;
+    height: 30px;
+    background-color: green;
+    font-family: 'Righteous', cursive;
+}
+
+#checkLate{
+	text-align: center;
+	background-color: white;
+	margin-bottom: 5%;
+	border-radius: 3px;
+	color: #330019;
+	margin-top: 60%;
+	padding: 16px 32px;
+
+}
+
+#checkNextSong {
+	width: 90%;
+	padding: 16px 32px;
+	
+	margin-left: 5%;
+	margin-right: 5%;
+	color: white;
+	margin-top: 5%;
+	border-radius: 3px;
+	background-color: #330019;
+	border:none;
+	font-family: 'Righteous', cursive;
+
+}
+
+
+
